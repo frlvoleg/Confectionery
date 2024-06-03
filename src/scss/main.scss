@@ -1,0 +1,175 @@
+@use "../../node_modules/@crossfox/css-start/dist/base.min.css";
+@import "variables";
+@import "base";
+@import "header";
+
+/* banner section */
+.banner-section {
+  h1 {
+    font-size: 6rem;
+    font-family: 'Cormorant Infant', Arial, sans-serif;
+    font-weight: 600;
+    max-width: 53.2rem;
+
+    span {
+      font-size: 4rem;
+      font-weight: 500;
+    }
+  }
+
+  p {
+    max-width: 40rem;
+  }
+
+  img {
+    max-width: 39rem;
+  }
+}
+
+.banner-info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3rem;
+  flex-direction: column;
+  align-items: flex-start;
+
+  p {
+    margin: 0 0 4rem;
+  }
+}
+
+/* cards section */
+
+.cards-section {
+  gap: 13rem;
+
+  .cards-intro {
+    align-items: center;
+    text-align: center;
+  }
+
+  p {
+    max-width: 50rem;
+  }
+}
+
+.cards {
+  gap: 4rem;
+
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  .cards-item {
+    background-color: white;
+    align-items: center;
+    gap: 3rem;
+    max-width: 42rem;
+
+    img {
+      width: 100%;
+
+    }
+
+    h3 {
+      font-size: 3rem;
+      font-family: 'Cormorant Infant', Arial, sans-serif;
+      font-weight: 500;
+      max-width: 28rem;
+      text-align: center;
+    }
+
+    box-shadow: .15rem .15rem .9rem -.2rem rgba(0, 0, 0, 0.28);
+  }
+
+  .inner-cards-item {
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 0;
+    max-width: 90%;
+    padding-bottom: 4rem;
+
+    .price {
+      gap: 2rem;
+
+      img {
+        width: 3.6rem;
+        height: 3.6rem;
+      }
+
+      p {
+        padding-top: 1.2rem;
+      }
+    }
+
+    .bonus {
+      color: $accent-color;
+      font-size: 2rem;
+      font-family: Avenir-medium;
+    }
+  }
+
+
+}
+
+/* for whom section */
+.forwhom-section {
+  align-items: center;
+  gap: 4rem;
+
+  :nth-child(3) {
+    flex-direction: row-reverse;
+
+    .cake-icon {
+      right: 100rem;
+    }
+  }
+}
+
+.div-item-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.cake-icon {
+  width: 30rem;
+  height: 48.5rem;
+  display: block;
+  position: absolute;
+  top: -4rem;
+  right: 8rem;
+  z-index: 1;
+}
+
+.forwhom-div {
+  gap: 2rem;
+  width: 100%;
+  border: .2rem solid $accent-color;
+  padding: 2rem 8rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.forwhom-rightside {
+  align-items: center;
+  max-width: 60rem;
+  gap: 2rem;
+
+  h4 {
+    font-size: 3rem;
+    font-family: 'Cormorant Infant', Arial, sans-serif;
+    font-weight: 600;
+    max-width: 24rem;
+    text-align: center;
+  }
+}
+
+
+
+
+@media (max-width: $width-mob) {
+  html {
+    font-size: 2.9vw;
+  }
+}
