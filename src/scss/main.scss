@@ -165,7 +165,90 @@
   }
 }
 
+.contacts-section {
+  .conts {
+    font-size: 4.8rem;
+    font-family: 'Cormorant Infant', Arial, sans-serif;
+    font-weight: 400;
+  }
 
+  .networks {
+    gap: 2rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    font-family: Avenir-medium;
+
+    svg {
+      width: 5.5rem;
+      padding-right: 2rem;
+    }
+
+  }
+
+  .footer-btns {
+    gap: 1.5rem;
+    font-size: 1.4rem;
+    font-family: Avenir-medium;
+  }
+
+  .right-part {
+    max-width: 43rem;
+    text-align: center;
+    align-items: center;
+    gap: 3rem;
+    border: 0.2rem solid $accent-color;
+    background-color: transparent;
+    padding: 2.2rem 1.8rem;
+
+    form {
+      gap: 2rem;
+      max-width: 30rem;
+      text-align: start;
+
+      input {
+        display: block;
+        border: 0.1rem solid $accent-color;
+        background-color: white;
+        padding: 1.3rem 5rem;
+        font-size: 1.6rem;
+        font-family: 'Cormorant Infant',
+          Arial,
+          sans-serif;
+        color: rgba(0, 0, 0, 0.055);
+      }
+
+      button {
+        display: block;
+        background-color: $accent-color;
+        padding: 1.6rem 5rem;
+        color: $secondary-text;
+        border: none;
+        font-size: $font-s;
+        font-family: Avenir-medium;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+
+  }
+
+
+}
+
+.reviews {
+  gap: 10rem;
+  align-items: center;
+
+  .photos {
+    gap: 5rem;
+  }
+}
 
 
 @media (max-width: $width-mob) {
