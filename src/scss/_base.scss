@@ -75,3 +75,14 @@ h2 {
     font-weight: 500;
   }
 }
+
+@media (max-width: $width-mob) {
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .container {
+    width: 80%;
+  }
+}

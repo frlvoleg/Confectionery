@@ -5,6 +5,7 @@
 
 /* banner section */
 .banner-section {
+
   h1 {
     font-size: 6rem;
     font-family: 'Cormorant Infant', Arial, sans-serif;
@@ -21,9 +22,11 @@
     max-width: 40rem;
   }
 
-  img {
-    max-width: 39rem;
+  .banner-imgs {
+    display: flex;
   }
+
+
 }
 
 .banner-info {
@@ -118,13 +121,7 @@
   align-items: center;
   gap: 4rem;
 
-  :nth-child(3) {
-    flex-direction: row-reverse;
 
-    .cake-icon {
-      right: 100rem;
-    }
-  }
 }
 
 .div-item-icon {
@@ -132,23 +129,15 @@
   height: 4rem;
 }
 
-.cake-icon {
-  width: 30rem;
-  height: 48.5rem;
-  display: block;
-  position: absolute;
-  top: -4rem;
-  right: 8rem;
-  z-index: 1;
-}
+
 
 .forwhom-div {
   gap: 2rem;
   width: 100%;
   border: .2rem solid $accent-color;
   padding: 2rem 8rem;
-  position: relative;
   margin-bottom: 3rem;
+  position: relative;
 }
 
 .forwhom-rightside {
@@ -241,6 +230,8 @@
 
 }
 
+/* reviews */
+
 .reviews {
   gap: 10rem;
   align-items: center;
@@ -251,8 +242,98 @@
 }
 
 
+@media (min-width: $width-mob) {
+  html {
+    font-size: .521vw;
+  }
+
+  .banner-imgs {
+    justify-content: end;
+    gap: 5rem;
+
+    img {
+      max-width: 39rem;
+    }
+  }
+
+  .forwhom-section {
+    :nth-child(3) {
+      flex-direction: row-reverse;
+
+      .cake-icon {
+        right: 100rem;
+      }
+    }
+  }
+
+  .cake-icon {
+    width: 30rem;
+    display: block;
+    position: absolute;
+    top: -4rem;
+    right: 8rem;
+    z-index: 1;
+  }
+
+}
+
 @media (max-width: $width-mob) {
   html {
-    font-size: 2.9vw;
+    font-size: 2.326vw;
   }
+
+  .banner-info {
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: 3.2rem;
+
+      span {
+        font-size: 4.6rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .banner-section {
+    flex-direction: column;
+    gap: 5rem;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .banner-imgs {
+    justify-content: space-between;
+    gap: 1rem;
+
+    img {
+      max-width: 17rem;
+    }
+  }
+
+  .cards-section {
+    span {
+      font-size: 2.4rem;
+    }
+
+  }
+
+  .forwhom-div {
+    flex-direction: column;
+    gap: 5rem;
+    padding: 2rem 2rem;
+
+    .cake-icon {
+      width: 20rem;
+    }
+
+    h4 {
+      font-size: 2.4rem;
+    }
+  }
+
 }
