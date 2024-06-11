@@ -40,7 +40,7 @@
 	],
 	"dependencies": {
 		"@crossfox/css-start": "^1.0.12",
-		"@glidejs/glide": "^3.6.0",
+		"@glidejs/glide": "^3.6.1",
 		"ip": "^1.1.8"
 	},
 	"name": "old_gulp",

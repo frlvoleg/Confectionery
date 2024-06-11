@@ -23,7 +23,13 @@
   }
 
   .banner-imgs {
-    display: flex;
+    width: 100%;
+    gap: 2rem;
+
+    img {
+      width: 49rem;
+    }
+
   }
 
 
@@ -54,10 +60,22 @@
   p {
     max-width: 50rem;
   }
+
+  .bullets-cont {
+    bottom: 1rem;
+
+    .glide__bullet {
+      background-color: #d0af5c60;
+    }
+
+    .glide__bullet--active {
+      background-color: $accent-color;
+    }
+  }
+
 }
 
 .cards {
-  gap: 4rem;
 
 
   p {
@@ -116,18 +134,27 @@
 
 }
 
+
+
 /* for whom section */
 .forwhom-section {
   align-items: center;
   gap: 4rem;
 
+  :nth-child(3) {
+    flex-direction: row-reverse;
 
+    .cake-icon {
+      left: 0;
+    }
+  }
 }
 
 .div-item-icon {
   width: 4rem;
   height: 4rem;
 }
+
 
 
 
@@ -230,6 +257,41 @@
 
 }
 
+/* author */
+
+.author {
+  align-items: center;
+
+  h2 {
+    max-width: 42rem;
+    padding-bottom: 5rem;
+
+    span {
+      color: $accent-color;
+    }
+
+  }
+
+  .author-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 6rem;
+
+    img {
+      max-width: 44rem;
+      width: 100%;
+    }
+
+    p {
+      max-width: 54rem;
+      font-size: 2.2rem;
+      font-family: Avenir-medium;
+    }
+  }
+
+
+}
+
 /* reviews */
 
 .reviews {
@@ -237,7 +299,19 @@
   align-items: center;
 
   .photos {
-    gap: 5rem;
+    width: 100%;
+
+    img {
+      width: 30rem;
+    }
+  }
+
+  .glide__bullet {
+    background-color: #d0af5c60;
+  }
+
+  .glide__bullet--active {
+    background-color: $accent-color;
   }
 }
 
@@ -247,25 +321,6 @@
     font-size: .521vw;
   }
 
-  .banner-imgs {
-    justify-content: end;
-    gap: 5rem;
-
-    img {
-      max-width: 39rem;
-    }
-  }
-
-  .forwhom-section {
-    :nth-child(3) {
-      flex-direction: row-reverse;
-
-      .cake-icon {
-        right: 100rem;
-      }
-    }
-  }
-
   .cake-icon {
     width: 30rem;
     display: block;
@@ -273,6 +328,10 @@
     top: -4rem;
     right: 8rem;
     z-index: 1;
+  }
+
+  .author-content {
+    display: grid;
   }
 
 }
@@ -316,10 +375,27 @@
   }
 
   .cards-section {
+
+
     span {
       font-size: 2.4rem;
     }
 
+    .cards-item {
+      .btn-full {
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+
+  }
+
+  .forwhom-section {
+    :nth-child(3) {
+      flex-direction: column;
+
+    }
   }
 
   .forwhom-div {
@@ -334,6 +410,40 @@
     h4 {
       font-size: 2.4rem;
     }
+  }
+
+  .contacts-section {
+    gap: 4rem;
+    flex-direction: column-reverse;
+
+    .left-part {
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .footer-logo {
+      display: none;
+    }
+
+    .footer-btns {
+      flex-direction: column;
+    }
+  }
+
+  .author {
+    h2 {
+      font-size: 3.6rem;
+
+      span {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .author-content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
   }
 
 }

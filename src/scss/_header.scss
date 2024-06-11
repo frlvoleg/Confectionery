@@ -10,6 +10,7 @@ header {
     width: 100%;
     padding: 1.5rem 0;
     font-size: $font-s;
+    z-index: 10;
 
     .header-container {
         align-items: center;
