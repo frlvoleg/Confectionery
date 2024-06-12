@@ -17,12 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     animationTimingFunc: "ease-in-out",
     breakpoints: {
       990: {
-        perView: 3,
-      },
-      768: {
-        perView: 2,
-      },
-      468: {
         perView: 1,
       },
     },

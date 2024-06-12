@@ -45,6 +45,7 @@ header {
         width: 2.5rem;
         height: .2rem;
         background-color: $accent-color;
+        transition: all 5s ease-in;
     }
 
     span:nth-child(1),

@@ -24,10 +24,9 @@
 
   .banner-imgs {
     width: 100%;
-    gap: 2rem;
 
     img {
-      width: 49rem;
+      width: 49%;
     }
 
   }
@@ -46,6 +45,7 @@
     margin: 0 0 4rem;
   }
 }
+
 
 /* cards section */
 
@@ -66,10 +66,14 @@
 
     .glide__bullet {
       background-color: #d0af5c60;
+      height: 1.2rem;
+      width: 1.2rem;
     }
 
     .glide__bullet--active {
       background-color: $accent-color;
+      height: 1.2rem;
+      width: 1.2rem;
     }
   }
 
@@ -86,11 +90,10 @@
     background-color: white;
     align-items: center;
     gap: 3rem;
-    max-width: 42rem;
+    width: 100%;
 
     img {
       width: 100%;
-
     }
 
     h3 {
@@ -182,6 +185,8 @@
 }
 
 .contacts-section {
+  background-color: $bg-color2;
+
   .conts {
     font-size: 4.8rem;
     font-family: 'Cormorant Infant', Arial, sans-serif;
@@ -261,6 +266,17 @@
 
 .author {
   align-items: center;
+  position: relative;
+
+  .author-bg {
+    position: absolute;
+    background-color: $bg-color2;
+    z-index: -1;
+    height: 80%;
+    width: 100%;
+    top: 23%;
+    left: 0;
+  }
 
   h2 {
     max-width: 42rem;
@@ -295,24 +311,33 @@
 /* reviews */
 
 .reviews {
-  gap: 10rem;
-  align-items: center;
+  background-color: $bg-color2;
+
+  .fx-col-sb {
+    gap: 10rem;
+    align-items: center;
+  }
 
   .photos {
     width: 100%;
 
     img {
-      width: 30rem;
+      width: 100%;
     }
   }
 
   .glide__bullet {
     background-color: #d0af5c60;
+    height: 1.2rem;
+    width: 1.2rem;
   }
 
   .glide__bullet--active {
     background-color: $accent-color;
+    height: 1.2rem;
+    width: 1.2rem;
   }
+
 }
 
 
@@ -413,8 +438,12 @@
   }
 
   .contacts-section {
-    gap: 4rem;
-    flex-direction: column-reverse;
+
+
+    .container {
+      gap: 4rem;
+      flex-direction: column-reverse;
+    }
 
     .left-part {
       gap: 3rem;
