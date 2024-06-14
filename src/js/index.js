@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     startAt: 0,
     // autoplay: 5000,
     // hoverpause: true,
+    gap: 30,
     perView: 3,
     animationDuration: 800,
     animationTimingFunc: "ease-in-out",
@@ -29,17 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
     startAt: 0,
     // autoplay: 5000,
     // hoverpause: true,
+    gap: 30,
     perView: 4,
     animationDuration: 800,
     animationTimingFunc: "ease-in-out",
     breakpoints: {
       990: {
-        perView: 4,
-      },
-      768: {
-        perView: 2,
-      },
-      468: {
         perView: 1,
       },
     },

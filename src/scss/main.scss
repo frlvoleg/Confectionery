@@ -340,6 +340,44 @@
 
 }
 
+.faq-section {
+  background-color: $bg-color2;
+
+  .faq-container {
+    gap: 6rem;
+  }
+
+  label {
+    display: block;
+  }
+
+  h4 {
+    position: relative;
+  }
+
+  h4::after {
+    content: '+';
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  [type="radio"].hidden:not(:checked)~.tab-content {
+    display: none;
+  }
+
+  [type="radio"].hidden:checked~h4::after {
+    content: "x";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
 
 @media (min-width: $width-mob) {
   html {
