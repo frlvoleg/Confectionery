@@ -158,9 +158,6 @@
   height: 4rem;
 }
 
-
-
-
 .forwhom-div {
   gap: 2rem;
   width: 100%;
@@ -185,7 +182,6 @@
 }
 
 .contacts-section {
-  background-color: $bg-color2;
 
   .conts {
     font-size: 4.8rem;
@@ -244,11 +240,16 @@
       button {
         display: block;
         background-color: $accent-color;
+        transition: 0.5s;
         padding: 1.6rem 5rem;
         color: $secondary-text;
         border: none;
         font-size: $font-s;
         font-family: Avenir-medium;
+      }
+
+      button:hover {
+        background-color: #C29F46;
       }
 
       p {
@@ -311,11 +312,18 @@
 /* reviews */
 
 .reviews {
-  background-color: $bg-color2;
+  gap: 10rem;
+  align-items: center;
+  position: relative;
 
-  .fx-col-sb {
-    gap: 10rem;
-    align-items: center;
+  .reviews-bg {
+    position: absolute;
+    background-color: $bg-color2;
+    z-index: -1;
+    height: 80%;
+    width: 100%;
+    top: 0%;
+    left: 0;
   }
 
   .photos {
@@ -340,12 +348,22 @@
 
 }
 
-.faq-section {
-  background-color: $bg-color2;
+/* faq */
 
-  .faq-container {
+.faq-section {
+  gap: 10rem;
+
+  h2 {
+    font-size: 4.2rem;
+    max-width: 85rem;
+    margin: 0 auto;
+  }
+
+  .faq-questions {
     gap: 6rem;
   }
+
+
 
   label {
     display: block;
@@ -353,15 +371,34 @@
 
   h4 {
     position: relative;
+    font-size: 2.4rem;
+    font-family: 'Cormorant Infant',
+      Arial,
+      sans-serif;
+    font-weight: 600;
+    padding-bottom: 3rem;
+  }
+
+  .tab-content {
+    font-size: 1.8rem;
   }
 
   h4::after {
     content: '+';
-    font-weight: 700;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    color: $accent-color;
+    font-size: 7rem;
+    font-weight: lighter;
+
+  }
+
+  h4:hover::after {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
   }
 
   [type="radio"].hidden:not(:checked)~.tab-content {
@@ -374,6 +411,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 5rem;
   }
 }
 

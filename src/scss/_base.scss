@@ -54,12 +54,18 @@ body {
 .btn-full {
   display: block;
   background-color: $accent-color;
+  transition: background-color 0.5s;
   padding: 1.6rem 5rem;
   color: $secondary-text;
   border: none;
   max-width: 24rem;
   font-size: $font-s;
   font-family: Avenir-medium;
+
+}
+
+.btn-full:hover {
+  background-color: #C29F46;
 }
 
 h2 {
