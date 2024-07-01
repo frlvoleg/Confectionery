@@ -55,3 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   }).mount();
 });
+
+//language
+
+const chooseLang = document.querySelectorAll(".lang-option");
+
+for (const v of chooseLang) {
+  v.addEventListener("click", (event) => {
+    document.querySelector(".lang-btn").innerHTML =
+      event.target.getAttribute("data-lang");
+  });
+}

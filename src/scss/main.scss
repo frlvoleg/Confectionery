@@ -476,6 +476,32 @@ details[open] summary~* {
 //   }
 // }
 
+/*first course short info*/
+
+.short-info {
+
+  .short-info-right-side {
+    max-width: 55rem;
+  }
+
+  h1 {
+    font-size: 10rem;
+    font-family: 'Cormorant Infant', Arial, sans-serif;
+    font-weight: 600;
+    line-height: 90%;
+
+    span {
+      font-size: 4rem;
+      font-weight: 500;
+    }
+  }
+
+  .btn-empty {
+    font-family: 'Cormorant Infant', Arial, sans-serif;
+    font-size: 3.3rem;
+    color: #7b6600;
+  }
+}
 
 
 @media (min-width: $width-mob) {
@@ -604,6 +630,24 @@ details[open] summary~* {
 
   .faq-section {
     gap: 5rem;
+
+    summary {
+      font-size: 2rem;
+    }
+
+    details {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+
+    summary::after {
+      bottom: 1.2rem;
+    }
   }
+
+
+
 
 }
