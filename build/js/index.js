@@ -1,8 +1,22 @@
 //burger menu
+
 const burgMenu = document.querySelector(".burg-menu");
 
 burgMenu.addEventListener("click", () => {
   document.body.classList.toggle("menu-active");
+});
+
+// header scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("header-shadow");
+    } else {
+      header.classList.remove("header-shadow");
+    }
+  });
 });
 
 // glide

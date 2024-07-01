@@ -153,6 +153,15 @@
   }
 }
 
+.cake-icon {
+  width: 30rem;
+  display: block;
+  position: absolute;
+  top: -4rem;
+  right: 8rem;
+  z-index: 1;
+}
+
 .div-item-icon {
   width: 4rem;
   height: 4rem;
@@ -234,7 +243,11 @@
         font-family: 'Cormorant Infant',
           Arial,
           sans-serif;
-        color: rgba(0, 0, 0, 0.055);
+        color: $primary-text;
+      }
+
+      input::placeholder {
+        color: $primary-text;
       }
 
       button {
@@ -290,6 +303,7 @@
   }
 
   .author-content {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 6rem;
@@ -354,85 +368,104 @@
   gap: 10rem;
 
   h2 {
-    font-size: 4.2rem;
     max-width: 85rem;
     margin: 0 auto;
   }
 
-  .faq-questions {
-    gap: 6rem;
-  }
-
-
-
-  label {
-    display: block;
-  }
-
-  h4 {
-    position: relative;
-    font-size: 2.4rem;
-    font-family: 'Cormorant Infant',
-      Arial,
-      sans-serif;
-    font-weight: 600;
-    padding-bottom: 3rem;
-  }
-
-  .tab-content {
-    font-size: 1.8rem;
-  }
-
-  h4::after {
-    content: '+';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: $accent-color;
-    font-size: 7rem;
-    font-weight: lighter;
-
-  }
-
-  h4:hover::after {
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-  }
-
-  [type="radio"].hidden:not(:checked)~.tab-content {
-    display: none;
-  }
-
-  [type="radio"].hidden:checked~h4::after {
-    content: "x";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 5rem;
+  p {
+    font-size: 1.9rem;
   }
 }
+
+summary {
+  position: relative;
+  list-style: none;
+  font-size: 2.8rem;
+  font-family: 'Cormorant Infant',
+    Arial,
+    sans-serif;
+  font-weight: 600;
+  padding-bottom: 3rem;
+}
+
+summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 6rem;
+  transition: transform .6s ease;
+}
+
+details[open] {
+  summary::after {
+    content: "×";
+    transform: rotate(90deg);
+
+  }
+}
+
+
+.faq-questions {
+  gap: 4rem;
+}
+
+
+
+//   label {
+//     display: block;
+//   }
+
+//   h4 {
+//     position: relative;
+//     font-size: 2.4rem;
+//     font-family: 'Cormorant Infant',
+//       Arial,
+//       sans-serif;
+//     font-weight: 600;
+//     padding-bottom: 3rem;
+//   }
+
+//   .tab-content {
+//     font-size: 1.8rem;
+//   }
+
+//   h4::after {
+//     content: '+';
+//     position: absolute;
+//     right: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     color: $accent-color;
+//     font-size: 7rem;
+//     font-weight: lighter;
+
+//   }
+
+//   h4:hover::after {
+//     background-color: white;
+//     color: black;
+//     border-radius: 50%;
+//   }
+
+//   [type="radio"].hidden:not(:checked)~.tab-content {
+//     display: none;
+//   }
+
+//   [type="radio"].hidden:checked~h4::after {
+//     content: "x";
+//     position: absolute;
+//     right: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     font-size: 5rem;
+//   }
+// }
 
 
 
 @media (min-width: $width-mob) {
   html {
     font-size: .521vw;
-  }
-
-  .cake-icon {
-    width: 30rem;
-    display: block;
-    position: absolute;
-    top: -4rem;
-    right: 8rem;
-    z-index: 1;
-  }
-
-  .author-content {
-    display: grid;
   }
 
 }
@@ -477,6 +510,7 @@
 
   .cards-section {
 
+    gap: 5rem;
 
     span {
       font-size: 2.4rem;
@@ -506,6 +540,7 @@
 
     .cake-icon {
       width: 20rem;
+      position: static;
     }
 
     h4 {
@@ -514,12 +549,8 @@
   }
 
   .contacts-section {
-
-
-    .container {
-      gap: 4rem;
-      flex-direction: column-reverse;
-    }
+    gap: 4rem;
+    flex-direction: column-reverse;
 
     .left-part {
       gap: 3rem;
@@ -538,6 +569,7 @@
   .author {
     h2 {
       font-size: 3.6rem;
+      padding-bottom: 3rem;
 
       span {
         font-size: 3rem;
@@ -545,10 +577,18 @@
     }
   }
 
-  .author-content {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
+  .author .author-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 3rem;
+  }
+
+  .reviews {
+    gap: 4rem;
+  }
+
+  .faq-section {
+    gap: 5rem;
   }
 
 }
