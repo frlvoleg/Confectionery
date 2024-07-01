@@ -404,6 +404,21 @@ details[open] {
   }
 }
 
+details[open] summary~* {
+  animation: open .5s ease;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+
 
 .faq-questions {
   gap: 4rem;
