@@ -2,6 +2,7 @@
 
 .header-nav-menu {
     gap: 3.5rem;
+    align-items: center;
 }
 
 header {
@@ -32,6 +33,7 @@ header {
 
     .lang {
         position: relative;
+        padding: 1rem 0;
     }
 
     .language-dropdown {

@@ -66,3 +66,17 @@ for (const v of chooseLang) {
       event.target.getAttribute("data-lang");
   });
 }
+
+//modal
+
+const modalBtns = document.querySelectorAll(".openModal");
+const modalBack = document.querySelector(".modal-background");
+const modalExits = document.querySelectorAll(".modal-exit");
+
+for (const v of modalBtns) {
+  v.addEventListener("click", () => modalBack.classList.add("show"));
+}
+
+for (const v of modalExits) {
+  v.addEventListener("click", () => modalBack.classList.remove("show"));
+}
