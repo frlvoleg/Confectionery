@@ -5,6 +5,7 @@
 
 /* banner section */
 .banner-section {
+  gap: 2rem;
 
   h1 {
     font-size: 6rem;
@@ -26,7 +27,7 @@
     width: 100%;
 
     img {
-      width: 49%;
+      width: 49.5%;
     }
 
   }
@@ -37,13 +38,11 @@
 .banner-info {
   display: flex;
   justify-content: flex-start;
-  gap: 3rem;
+  gap: 4rem;
   flex-direction: column;
   align-items: flex-start;
 
-  p {
-    margin: 0 0 4rem;
-  }
+
 }
 
 
@@ -62,7 +61,7 @@
   }
 
   .bullets-cont {
-    bottom: 1rem;
+    bottom: -3rem;
 
     .glide__bullet {
       background-color: #d0af5c60;
@@ -116,6 +115,7 @@
 
     .price {
       gap: 2rem;
+      align-items: center;
 
       img {
         width: 3.6rem;
@@ -123,7 +123,11 @@
       }
 
       p {
-        padding-top: 1.2rem;
+        font-weight: 500;
+        font-family: "Cormorant Infant",
+          Arial,
+          sans-serif;
+        font-size: 2.5rem;
       }
     }
 
@@ -142,7 +146,7 @@
 /* for whom section */
 .forwhom-section {
   align-items: center;
-  gap: 4rem;
+  gap: 7rem;
 
   :nth-child(3) {
     flex-direction: row-reverse;
@@ -150,6 +154,10 @@
     .cake-icon {
       left: 0;
     }
+  }
+
+  h2 {
+    margin: 0;
   }
 }
 
@@ -171,8 +179,7 @@
   gap: 2rem;
   width: 100%;
   border: .2rem solid $accent-color;
-  padding: 2rem 8rem;
-  margin-bottom: 3rem;
+  padding: 3.5rem 8rem;
   position: relative;
 }
 
@@ -221,24 +228,24 @@
   }
 
   .right-part {
-    max-width: 43rem;
+    max-width: 48rem;
     text-align: center;
     align-items: center;
     gap: 3rem;
     border: 0.2rem solid $accent-color;
     background-color: transparent;
-    padding: 2.2rem 1.8rem;
+    padding: 3rem 5rem;
 
     form {
       gap: 2rem;
-      max-width: 30rem;
+      width: 100%;
       text-align: start;
 
       input {
         display: block;
         border: 0.1rem solid $accent-color;
         background-color: white;
-        padding: 1.3rem 5rem;
+        padding: 1.3rem 2rem;
         font-size: 1.6rem;
         font-family: 'Cormorant Infant',
           Arial,
@@ -302,6 +309,7 @@
 
   }
 
+
   .author-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -311,6 +319,12 @@
     img {
       max-width: 44rem;
       width: 100%;
+    }
+
+    .quote-mark {
+      max-width: 5rem;
+      display: inline;
+      padding: 0 1rem;
     }
 
     p {
@@ -336,7 +350,7 @@
     z-index: -1;
     height: 80%;
     width: 100%;
-    top: 0%;
+    top: 0;
     left: 0;
   }
 
@@ -346,6 +360,10 @@
     img {
       width: 100%;
     }
+  }
+
+  .bullets-cont {
+    bottom: -3rem;
   }
 
   .glide__bullet {
@@ -386,6 +404,10 @@ summary {
     sans-serif;
   font-weight: 600;
   padding-bottom: 3rem;
+
+  cursor: pointer;
+
+
 }
 
 summary::after {
@@ -396,10 +418,22 @@ summary::after {
   transition: transform .6s ease;
 }
 
+details {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
 details[open] {
   summary::after {
     transform: rotate(45deg);
     transition: transform .6s ease;
+  }
+
+  p {
+    line-height: 1.6;
   }
 }
 
@@ -522,11 +556,14 @@ details[open] summary~* {
   opacity: 0;
   transition: opacity .6s ease;
   pointer-events: none;
+
 }
 
 .modal {
   background-color: $bg-color;
   padding: 2rem;
+  overflow: auto;
+  max-height: 90%;
 
   span {
     display: flex;
@@ -539,9 +576,45 @@ details[open] summary~* {
   }
 }
 
+.modal-inner {
+  gap: 6rem;
+}
+
 .modal-background.show {
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal-start {
+  align-items: center;
+
+  gap: 2rem;
+
+  p {
+    max-width: 60rem;
+    font-family: 'Cormorant Infant',
+      Arial,
+      sans-serif;
+    font-size: 2.4rem;
+  }
+}
+
+.modal-main {
+  text-align: left;
+  gap: 3rem;
+}
+
+.modal-header {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.modal-text {
+  padding-bottom: 2rem;
+  font-family: 'Cormorant Infant',
+    Arial,
+    sans-serif;
+  font-size: 1.6rem;
 }
 
 
@@ -575,6 +648,7 @@ details[open] summary~* {
     flex-direction: column;
     gap: 5rem;
     text-align: center;
+    padding: 9.5rem 0;
 
     p {
       margin: 0;
@@ -657,7 +731,10 @@ details[open] summary~* {
         font-size: 3rem;
       }
     }
+
+
   }
+
 
   .author .author-content {
     grid-template-columns: 1fr;

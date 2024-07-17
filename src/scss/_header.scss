@@ -1,7 +1,7 @@
 @import "variables";
 
 .header-nav-menu {
-    gap: 3.5rem;
+    gap: 4.5rem;
     align-items: center;
 }
 
@@ -14,9 +14,10 @@ header {
     z-index: 10;
 
     .logo {
-        img {
-            max-width: 14rem;
-        }
+        width: 17rem;
+        // img {
+        //     max-width: 14rem;
+        // }
     }
 
     .header-container {
@@ -67,6 +68,8 @@ header {
     }
 
     @include isMobile {
+        padding: 2.3rem 0;
+
         .btn-empty {
             display: none;
         }

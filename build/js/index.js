@@ -69,14 +69,32 @@ for (const v of chooseLang) {
 
 //modal
 
-const modalBtns = document.querySelectorAll(".openModal");
+const modalBtnFirst = document.querySelector(".openModalFirst");
+const modalBtnSecond = document.querySelector(".openModalSecond");
 const modalBack = document.querySelector(".modal-background");
 const modalExits = document.querySelectorAll(".modal-exit");
+const modal = document.querySelector(".modal");
+const firstModal = document.querySelector(".first-modal");
+const secondModal = document.querySelector(".second-modal");
 
-for (const v of modalBtns) {
-  v.addEventListener("click", () => modalBack.classList.add("show"));
-}
+// for (const v of modalBtns) {
+//   v.addEventListener("click", () => modalBack.classList.add("show"));
+// }
+
+modalBtnFirst.addEventListener("click", () => firstModal.classList.add("show"));
+
+modalBtnSecond.addEventListener("click", () =>
+  secondModal.classList.add("show")
+);
 
 for (const v of modalExits) {
   v.addEventListener("click", () => modalBack.classList.remove("show"));
 }
+
+modal.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", (e) =>
+  !modalBack.contains(e.target) ? 0 : modalBack.classList.remove("show")
+);
